@@ -113,10 +113,10 @@ when "multiply", "*"
   "\n#{num_1} * #{num_2} = #{calculate_multiplication}"
 when "divide", "/"
   calculate_division = divide(num_1, num_2)
-  "\n#{num_1} + #{num_2} = #{calculate_division}"
+  "\n#{num_1} / #{num_2} = #{calculate_division}"
 when "exponent", "**"
   calculate_exponential = exponential(num_1, num_2)
-  "\n#{num_1} + #{num_2} = #{calculate_exponential}"
+  "\n#{num_1} ** #{num_2} = #{calculate_exponential}"
 end
 
 puts "\n~Thanks For Using Mads Calculator!~"
