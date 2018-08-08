@@ -1,4 +1,4 @@
-puts "Welcome to the Calculator program!"
+puts "Welcome to the Nifty Calculator program!"
 
 expression = ["add(+)", "subtract(-)", "multiply(*)", "divide(/)"]
 
@@ -84,7 +84,7 @@ close_program = gets.chomp
 if close_program == "yes" || close_program == "YES" || close_program == "Yes"
   in_progress = true
 else
-  puts ""
+  puts "Thanks for using the Nifty Calculator"
   in_progress = false
 end
 
