@@ -1,17 +1,9 @@
-def float_or_int?(num)
+def make_numeric(num)
   if num.include?('.')
-    num = convert_to_float(num)
+    num = num.to_f
   else
-    num = convert_to_int(num)
+    num = num.to_i
   end
-end
-
-def convert_to_float(num)
-  return num = num.to_f
-end
-
-def convert_to_int(num)
-  return num = num.to_i
 end
 
 def number?(obj)
@@ -89,7 +81,7 @@ until number?(user_input)
   user_input = gets.chomp
 end
 
-num_1 = float_or_int?(user_input)
+num_1 = make_numeric(user_input)
 
 print "\nWhat is the second number? "
 user_input = gets.chomp
@@ -99,7 +91,7 @@ until number?(user_input)
   user_input = gets.chomp
 end
 
-num_2 = float_or_int?(user_input)
+num_2 = make_numeric(user_input)
 
 puts case option
 when "add", "+"
