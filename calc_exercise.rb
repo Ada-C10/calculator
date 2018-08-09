@@ -9,13 +9,12 @@ def calculator_operators
 end
 
 # Verifying valid operators have been selected
-def valid_operators(operator)
-  until %w[add + subtract - multiply * divide /].include?(operator)
-    puts "That's not a valid operator! Please select from the options below: "
-    calculator_operators
-    operator = gets.chomp.downcase
+def valid_num(number)
+  until (true if Float(number) rescue false)
+    puts "I need a number please!"
+    number = gets.chomp
   end
-  return operator
+  return number.to_f
 end
 
 
@@ -26,13 +25,13 @@ calculator_operators
 # verifies user entry and displays options in a loop
 user_entry = valid_operators(gets.chomp.downcase)
 
-# Verifying user entered a number with regex
+# Verifying user enters a number
 def valid_num(number)
   while number != Integer
     puts "I need a number please!"
     number = gets.chomp
   end
-  return number
+  return number.to_f
 end
 
 puts "First number: "
@@ -43,7 +42,7 @@ num2 = valid_num(gets.chomp.to_f)
 
 case user_entry
   when "add", "+"
-    add_total = num1 + num2
+    add_total = num1 + num2 
     puts "#{num1} + #{num2} = #{add_total}"
   when "subtract", "-"
     sub_total = num1 - num2
