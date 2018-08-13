@@ -89,6 +89,7 @@ def mod(num1, num2)
     return puts "you can't mod by zero, try again!"
   else
     return num1 % num2
+  end
 end
 
 # power
